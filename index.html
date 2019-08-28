@@ -2,19 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pagrindinis failas</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/mano.css">
 </head>
 <body>
-    <h1>Pagrindinis puslapis</h1>
-    <p>Pirmas paragrafas</p>
-    <p>Lorem <b>ipsum</b> dolor sit amet, consectetur adipisicing elit. Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.</p>
-    <p>Lorem ipsum <b><i>dolor</i></b> sit amet, consectetur adipisicing elit. Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.</p>
-    <p>Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit.</mark> Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.</p>
-    <p>Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit.</mark> Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.</p>
-    <p>Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit.</mark> Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.</p>
-    <p>Lorem <small>ipsum <b>dolor</b> <del>sit</del> amet</small>, consectetur adipisicing elit. Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.</p>
-    <div>Visos teises saugomos &copy; 2019</div>
+
+<div id="grid">
+    <div class="gridItem1">
+        <img src="https://via.placeholder.com/250x71.png?text=LOGO" alt="Logo">
+    </div>
+    <div class="gridItem2">
+        <div class="meniu-center">
+            <a href="#apie">Apie</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#kontaktai">Kontaktai</a>
+        </div>
+    </div>
+    <div class="gridItem3">
+        <div class="login">
+            <a href="#login">Admin <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+    <div class="gridItem4">
+        <div class="skills">
+            <div class="skill html">HTML
+                <div class="skillProgress"><div class="progr"></div></div>
+            </div>
+            <div class="skill css">CSS
+                <div class="skillProgress"><div class="progr"></div></div>
+            </div>
+            <div class="skill js">JS
+                <div class="skillProgress"><div class="progr"></div></div>
+            </div>
+            <div class="skill php">PHP
+                <div class="skillProgress"><div class="progr"></div></div>
+            </div>
+            <div class="skill sql">SQL
+                <div class="skillProgress"><div class="progr"></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="gridItem5">
+        <main>
+            <h1>Pagrindinis puslapis</h1>
+            <p>Pirmas paragrafas</p>
+            <p>Lorem <b>ipsum</b> dolor sit amet, consectetur adipisicing elit. Assumenda consequatur facere facilis
+                ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi
+                sed sequi vero voluptatibus.</p>
+            <p>Lorem ipsum <b><i>dolor</i></b> sit amet, consectetur adipisicing elit. Assumenda consequatur facere
+                facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat
+                quasi sed sequi vero voluptatibus.</p>
+            <p>Lorem ipsum dolor sit amet,
+                <mark>consectetur adipisicing elit.</mark>
+                Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum
+                ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.
+            </p>
+            <p>Lorem ipsum dolor sit amet,
+                <mark>consectetur adipisicing elit.</mark>
+                Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum
+                ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.
+            </p>
+            <p>Lorem ipsum dolor sit amet,
+                <mark>consectetur adipisicing elit.</mark>
+                Assumenda consequatur facere facilis ipsum necessitatibus provident? Accusantium corporis, eaque eos eum
+                ex, hic neque omnis quaerat quasi sed sequi vero voluptatibus.
+            </p>
+            <p>Lorem <small>ipsum <b>dolor</b>
+                <del>sit</del>
+                amet</small>, consectetur adipisicing elit. Assumenda consequatur facere facilis ipsum necessitatibus
+                provident? Accusantium corporis, eaque eos eum ex, hic neque omnis quaerat quasi sed sequi vero
+                voluptatibus.
+            </p>
+        </main>
+    </div>
+    <div class="gridItem6">
+        <h3>Naujausi darbai</h3>
+        <div class="darbas">
+            <img src="img/architecture-clean-contemporary-389818.jpg" alt="Portfolio1">
+            <small>Mano paskutinis darbas</small>
+        </div>
+        <div class="darbas">
+            <img src="img/ballpen-blur-close-up-461077.jpg" alt="Portfolio2">
+            <small>Mano kitas darbas</small>
+        </div>
+    </div>
+    <div class="gridItem7">
+        <span>Visos teisės saugomos &copy;2019</span>
+    </div>
+    <div class="gridItem8">
+        <span>Sukurta: Tautvydo Dulskio</span>
+    </div>
+</div>
 </body>
 </html>

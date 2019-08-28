@@ -1,3 +1,82 @@
-body {
-    background-color: deepskyblue;
+#grid{
+    display: grid;
+    grid-template-areas:
+        'h1 h2 h3'
+        'sl main sr'
+        'fl fl fr';
+    grid-template-columns: 250px auto 250px;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+.gridItem1 {
+    grid-area: h1;
+}
+.gridItem2 {
+    grid-area: h2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 20px;
+}
+.gridItem3 {
+    grid-area: h3;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-right: 50px;
+}
+.gridItem4 {
+    grid-area: sl;
+}
+.gridItem5 {
+    grid-area: main;
+}
+.gridItem6 {
+    grid-area: sr;
+}
+.gridItem7 {
+    grid-area: fl;
+}
+.gridItem8 {
+    grid-area: fr;
+}
+
+.gridItem2 a {
+    font-size: 36px;
+    padding: 10px;
+    margin: 0 3px;
+    border-right: 2px solid darkgray;
+}
+.gridItem2 a:last-child {
+    border-right:none;
+}
+
+.skills {
+    padding: 0 0 20px 15px;
+    font-size: 18px;
+}
+.skill {
+    padding-bottom: 10px;
+}
+.skillProgress {
+    width: 100%;
+    height: 20px;
+    background-color: antiquewhite;
+}
+
+.gridItem6 {
+    text-align: center;
+}
+.gridItem6 h3{
+    padding-bottom: 5px;
+    border-bottom: 2px dashed black;
+    margin-bottom: 5px;
+}
+.gridItem6 img {
+    width: 230px;
+}
+
+.gridItem7, .gridItem8 {
+    background-color: darkgray;
+    grid-column-gap: 0;
 }
