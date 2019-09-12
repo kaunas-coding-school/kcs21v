@@ -1,0 +1,12 @@
+{
+    "name": "tautiz/testas",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tautvydas Dulskis",
+            "email": "tautvydas@dulskis.eu"
+        }
+    ],
+    "require": {}
+}

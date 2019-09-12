@@ -1,5 +1,7 @@
 <?php
 
+namespace KCS\Entity;
+
 Class Car
 {
     public $spalva;

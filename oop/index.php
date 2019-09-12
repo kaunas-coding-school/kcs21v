@@ -1,5 +1,9 @@
-<?php
-include 'Car.php';
+<?php declare(strict_types=1);
+
+require __DIR__ . '/vendor/autoload.php';
+
+use KCS\Entity\Car;
+
 $automobilis = new Car();
 $automobilis->spalva = 'raudona';
 $automobilis->greitis = '50km/h';
