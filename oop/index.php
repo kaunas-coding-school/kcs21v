@@ -5,6 +5,31 @@ use KCS\Entity\Student;
 
 require __DIR__ . '/vendor/autoload.php';
 
+function pildytiStudentus(array $studentai): array
+{
+    $naujaGrupe = [];
+    foreach ($studentai as $studentas) {
+        $student = new Student();
+        $student->setFirstName($studentas['vardas']);
+        $student->setLastName($studentas['pavarde']);
+        $student->setGroupe($studentas['grupe']);
+        $student->setBirthDate($studentas['gimimo']);
+
+        $naujaGrupe[] = $student;
+    }
+
+    return $naujaGrupe;
+}
+
+function spausdintiStudentus(array $naujaGrupe = []){
+    if (empty($naujaGrupe)) {
+        throw new \Exception('Nėra naujos grupės masyvo');
+    }
+    foreach ($naujaGrupe as $studentas) {
+        echo $studentas;
+    }
+}
+
 try {
     $automobilis = new Car();
     $automobilis->spalva = 'raudona';
@@ -23,13 +48,11 @@ try {
         ['vardas' => 'Vardenis4', 'pavarde' => 'Pavardenis4', 'grupe' => 'KCS20V', 'gimimoData' => '1980-01-04'],
         ['vardas' => 'Vardenis5', 'pavarde' => 'Pavardenis5', 'grupe' => 'KCS20V', 'gimimoData' => '1980-01-04'],
     ];
-    $naujaGrupe = [];
-    foreach ($studentai as $studentas) {
-        $student = new Student();
-        $student->setFirstName($studentas['vardas']);
 
-        $naujaGrupe[] = $student;
-    }
+    $naujaGrupe = pildytiStudentus($studentai) ?? [];
+
+    spausdintiStudentus($naujaGrupe);
+
 }catch(\Exception $exception){
     echo 'Oii.. nutiko gyvenimas ir įvyko klaida :P :D';
 }
