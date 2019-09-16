@@ -30,7 +30,6 @@ try {
 
         $naujaGrupe[] = $student;
     }
-
-}catch( Exception $exception){
+}catch(\Exception $exception){
     echo 'Oii.. nutiko gyvenimas ir įvyko klaida :P :D';
 }
