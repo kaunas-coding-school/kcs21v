@@ -13,7 +13,7 @@ function pildytiStudentus(array $studentai): array
         $student->setFirstName($studentas['vardas']);
         $student->setLastName($studentas['pavarde']);
         $student->setGroupe($studentas['grupe']);
-        $student->setBirthDate($studentas['gimimo']);
+        $student->setBirthDate($studentas['gimimoData']);
 
         $naujaGrupe[] = $student;
     }
@@ -26,7 +26,7 @@ function spausdintiStudentus(array $naujaGrupe = []){
         throw new \Exception('Nėra naujos grupės masyvo');
     }
     foreach ($naujaGrupe as $studentas) {
-        echo $studentas;
+        echo $studentas . ' Grupe: ' .$studentas->getGrupe();
     }
 }
 
