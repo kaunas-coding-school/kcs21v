@@ -2,6 +2,7 @@
 
 use KCS\Entity\Car;
 use KCS\Entity\Student;
+use KCS\Repository\StudentasRepo;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -12,8 +13,8 @@ function pildytiStudentus(array $studentai): array
         $student = new Student();
         $student->setFirstName($studentas['vardas']);
         $student->setLastName($studentas['pavarde']);
-        $student->setGroupe($studentas['grupe']);
-        $student->setBirthDate($studentas['gimimoData']);
+        $student->setGroup($studentas['grupe']);
+        $student->setPersonCode($studentas['asmens_kodas']);
 
         $naujaGrupe[] = $student;
     }
@@ -26,7 +27,7 @@ function spausdintiStudentus(array $naujaGrupe = []){
         throw new \Exception('Nėra naujos grupės masyvo');
     }
     foreach ($naujaGrupe as $studentas) {
-        echo $studentas . ' Grupe: ' .$studentas->getGrupe();
+        echo $studentas . ' a.k.: ' .$studentas->getPersonCode();
     }
 }
 
@@ -40,14 +41,8 @@ try {
     $automobilis->vaziuoti();
     echo "<br>Rida: {$automobilis->gautiRida()}";
 
-    $studentai = [
-        ['vardas' => 'Vardenis0', 'pavarde' => 'Pavardenis0', 'grupe' => 'KCS21V', 'gimimoData' => '1980-01-01'],
-        ['vardas' => 'Vardenis1', 'pavarde' => 'Pavardenis1', 'grupe' => 'KCS21V', 'gimimoData' => '1980-01-02'],
-        ['vardas' => 'Vardenis2', 'pavarde' => 'Pavardenis2', 'grupe' => 'KCS21V', 'gimimoData' => '1980-01-03'],
-        ['vardas' => 'Vardenis3', 'pavarde' => 'Pavardenis3', 'grupe' => 'KCS21V', 'gimimoData' => '1980-01-04'],
-        ['vardas' => 'Vardenis4', 'pavarde' => 'Pavardenis4', 'grupe' => 'KCS20V', 'gimimoData' => '1980-01-04'],
-        ['vardas' => 'Vardenis5', 'pavarde' => 'Pavardenis5', 'grupe' => 'KCS20V', 'gimimoData' => '1980-01-04'],
-    ];
+    $studRepo = new StudentasRepo();
+    $studentai = $studRepo->gautiStudentus();
 
     $naujaGrupe = pildytiStudentus($studentai) ?? [];
 

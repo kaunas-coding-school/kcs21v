@@ -7,8 +7,8 @@ class Student
     private $id;
     private $firstName;
     private $lastName;
-    private $birthDate;
-    private $groupe;
+    private $personCode;
+    private $group;
 
     /**
      * @return mixed
@@ -67,36 +67,36 @@ class Student
     /**
      * @return mixed
      */
-    public function getBirthDate()
+    public function getPersonCode()
     {
-        return $this->birthDate;
+        return $this->personCode;
     }
 
     /**
-     * @param mixed $birthDate
+     * @param mixed $personCode
      * @return Student
      */
-    public function setBirthDate($birthDate)
+    public function setPersonCode($personCode)
     {
-        $this->birthDate = $birthDate;
+        $this->personCode = $personCode;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getGroupe()
+    public function getGroup()
     {
-        return $this->groupe;
+        return $this->group;
     }
 
     /**
-     * @param mixed $groupe
+     * @param mixed $group
      * @return Student
      */
-    public function setGroupe($groupe)
+    public function setGroup($group)
     {
-        $this->groupe = $groupe;
+        $this->group = $group;
         return $this;
     }
 
