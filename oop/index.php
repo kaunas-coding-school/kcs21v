@@ -49,7 +49,7 @@ try {
     spausdintiStudentus($naujaGrupe);
 
     $stud = new Student();
-    $stud->setLastName('Jonas');
+    $stud->setFirstName('Jonas');
     $stud->setLastName('Jonaitis');
     $stud->setPersonCode(98765432101);
     $stud->setGroup(2);
