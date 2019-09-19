@@ -48,6 +48,16 @@ try {
 
     spausdintiStudentus($naujaGrupe);
 
+    $stud = new Student();
+    $stud->setLastName('Jonas');
+    $stud->setLastName('Jonaitis');
+    $stud->setPersonCode(98765432101);
+    $stud->setGroup(2);
+
+    $studRepo->save($stud);
+
+    $studRepo->close();
+
 }catch(\Exception $exception){
     echo 'Oii.. nutiko gyvenimas ir įvyko klaida :P :D';
 }

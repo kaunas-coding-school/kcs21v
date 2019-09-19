@@ -2,6 +2,8 @@
 
 namespace KCS\Repository;
 
+use \KCS\Entity\Student;
+
 class StudentasRepo
 {
     private $conn;
@@ -34,5 +36,22 @@ class StudentasRepo
         $studentai = $stmt->fetchAll();
 
         return $studentai;
+    }
+
+    public function save(Student $student): void
+    {
+        $stmt = $this->conn->prepare(
+            'INSERT INTO studentas (vardas, pavarde, asmens_kodas, grupe) VALUES (:vrd, :pvd, :ak, :grp);'
+        );
+        $stmt->bindParam(':vrd', $student->getFirstName());
+        $stmt->bindParam(':pvd', $student->getLastName());
+        $stmt->bindParam(':ak', $student->getPersonalCode());
+        $stmt->bindParam(':grp', $student->getGroup());
+        $stmt->execute();
+    }
+
+    public function close()
+    {
+        $this->conn = null;
     }
 }
